@@ -3,33 +3,35 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - mission11_goodman</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/mission11_goodman.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - mission11_goodman</title> <!-- Setting the page title -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> <!-- Linking Bootstrap CSS -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> <!-- Linking custom site CSS -->
+    <link rel="stylesheet" href="~/mission11_goodman.styles.css" asp-append-version="true" /> <!-- Linking custom mission11_goodman CSS -->
 </head>
 <body>
     <header>
+        <!-- Navigation bar -->
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand mx-auto" href="#">Hilton's Book List</a>
+                <a class="navbar-brand mx-auto" href="#">Hilton's Book List</a> <!-- Displaying the brand name -->
             </div>
         </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            @RenderBody()
+            @RenderBody() <!-- Rendering main content -->
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - mission11_goodman - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - mission11_goodman <!-- Displaying copyright and privacy link -->
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    <!-- Scripts -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script> <!-- jQuery -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS -->
+    <script src="~/js/site.js" asp-append-version="true"></script> <!-- Custom site JS -->
+    @await RenderSectionAsync("Scripts", required: false) <!-- Rendering additional scripts -->
 </body>
 </html>

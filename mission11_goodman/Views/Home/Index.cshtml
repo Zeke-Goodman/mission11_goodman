@@ -1,30 +1,30 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home Page"; // Setting the title of the page
 }
-@model BookListViewModel
+
+@model BookListViewModel // Specifying the model for the view
 
 <div class="container">
     <div class="row justify-content-center">
-        @foreach (Book b in Model.Books)
+        @foreach (Book b in Model.Books) // Looping through each book in the model
         {
             <div class="col-6">
                 <div class="card">
-                    <h4 class="card-header">@b.Title</h4>
+                    <h4 class="card-header">@b.Title</h4> <!-- Displaying the book title -->
                     <div class="card-body">
                         <ul class="list-unstyled">
-                            <li>Author: @b.Author</li>
-                            <li>Publisher: @b.Publisher</li>
-                            <li>ISBN: @b.Isbn</li>
-                            <li>Classification/Category: @b.Classification</li>
-                            <li>Number of Pages: @b.PageCount</li>
-                            <li>Price: @b.Price</li>
+                            <li>Author: @b.Author</li> <!-- Displaying the author of the book -->
+                            <li>Publisher: @b.Publisher</li> <!-- Displaying the publisher of the book -->
+                            <li>ISBN: @b.Isbn</li> <!-- Displaying the ISBN of the book -->
+                            <li>Classification/Category: @b.Classification</li> <!-- Displaying the classification/category of the book -->
+                            <li>Number of Pages: @b.PageCount</li> <!-- Displaying the number of pages in the book -->
+                            <li>Price: @b.Price</li> <!-- Displaying the price of the book -->
                         </ul>
                     </div>
                 </div>
             </div>
         }
     </div>
+    <!-- Dynamically rendering pagination using the PaginationTagHelper -->
     <div page-model="@Model.Pagination" page-action="Index" page-classes-enabled="true" page-class="btn" page-class-normal="btn-outline-dark" page-class-selected="btn-primary"></div>
 </div>
-
-
